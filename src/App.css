@@ -15,15 +15,23 @@ a{
 
 /* header */
 
-#hd>.hdwrap{
+#hd{
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#hd .hdwrap{
   height: 60px;
-  background-color: #0a0a0a;
+  background-color: #000000;
   padding: 0 50px;
+}
+#hd>div{
+  width: 100%;
+  height: 100%;
 }
 #hd a, span{
   color: white;
 }
-
 #hd h1>a{
   height: 30px;
   display: block;
@@ -32,6 +40,7 @@ a{
   height: 100%;
   display: block;
 }
+
 
 .gnb{
   font-weight: bold;
@@ -48,27 +57,30 @@ a{
 }
 
 
-
 .language{
   margin-right: 10px;
 }
 #hd .language a{
   border: white solid 1px;
   display: block;
-  cursor: pointer;
   padding: 5px;
+  border-collapse: collapse;
 }
 .language img{
   width: 36px;
   display: block;
 }
 .language ul{
-  bottom: 1px;
   width: 100%;
   max-height: 0;
   overflow: hidden;
+  z-index: 600;
+  transition: 0.5s;
+  top: calc(100% - 1px);
 }
-
+.language:hover ul{
+  max-height: 100px;
+}
 
 
 .lnb{
@@ -76,25 +88,66 @@ a{
   top: 100%;
   left: 0%;
   width: 100%;
-  background-color: #1d1d1d;
+  background-color: #141414;
   padding: 0 15%;
   text-align: center;
 }
-
 .lnb-menu{
   margin: 30px 10px;
-  width: calc(25% - 50px);
-  height: 18vw;
-  
+  width: calc(20% - 50px);
+}
+.lnb-img{
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+.lnb-img>a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
 }
 .lnb-menu img{
   width: 100%;
+  margin: auto;
+  transform: scale(0.85);
+  transition: 0.2s;
 }
-.lnb-img{
-  width: 15vw;
-  height: 70%;
+.lnb-text{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 20px;
+  transition: 0.8s;
 }
-.lnb-img img{
-  width: 160px;
-  height: 160px;
+
+.lnb-img>a:hover>img{
+  transform: scale(1);
 }
+.lnb{
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+}
+.product:hover{
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+}
+.product:hover .lnb{
+  pointer-events: all;
+}
+.product:hover .lnb{
+  opacity: 1;
+}
+#hd .product .lnb-img:hover+.lnb-text{
+  color: #4bc4f0;
+}
+#hd .product .lnb-text:hover{
+  color: #4bc4f0;
+}
+
+
+
+/* banners */
