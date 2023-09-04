@@ -1,12 +1,47 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { LuSearch, LuShoppingCart, LuUser, LuChevronDown } from "react-icons/lu";
 
+
+
+
+
 const Header = () => {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    const handleScroll = () => {
+        // 스크롤 위치를 확인하고, 원하는 임계값에 따라 클래스를 추가 또는 제거합니다.
+        const threshold = 100; // 스크롤 임계값 설정
+    
+        if (window.scrollY > threshold) {
+          // 스크롤 위치가 임계값을 넘으면 클래스를 추가합니다.
+          setIsScrolled(true);
+        } else {
+          // 스크롤 위치가 임계값 이하면 클래스를 제거합니다.
+          setIsScrolled(false);
+        }
+    };
+
+    useEffect(() => {
+          window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
+    
+
+   
+
+
+
+
     return (
-        <div id='hd' className='position-absolute'>
+        <div id='hd' className='fixed-top'>
             <div className='position-relative'>
-                <div className="hdwrap d-flex justify-content-between align-items-center">
-                    <h1><a href=""><img src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo_(2019).svg`} alt="top-logo" /></a></h1>
+                <div className={ `hdwrap d-flex justify-content-between align-items-center ${ isScrolled ? 'bg-transparent' : '' }` }>
+                    <h1><a href=""><img src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo.svg`} alt="top-logo" /></a></h1>
                     <ul className='gnb d-flex'>
                         <li className='product mx-3'>
                             <a href="">Product<LuChevronDown/></a>
@@ -38,10 +73,10 @@ const Header = () => {
                     </ul>
                     <ul className='side-nav d-flex align-items-center'>
                         <div className='language position-relative'>
-                            <a href=""><img src={`${process.env.PUBLIC_URL}/img/language/kr.svg`} alt="Kr" /></a>
+                            <a href="">KR<LuChevronDown/></a>
                             <ul className='position-absolute'>
-                                <li><a href=""><img src={`${process.env.PUBLIC_URL}/img/language/jp.svg`} alt="Jp" /></a></li>
-                                <li><a href=""><img src={`${process.env.PUBLIC_URL}/img/language/Global.jpg`} alt="Gb" /></a></li>
+                                <li><a href="">JP</a></li>
+                                <li><a href="">GB</a></li>
                             </ul>
                         </div>
                         <li><a href=""><LuSearch className='d-block' /></a></li>
