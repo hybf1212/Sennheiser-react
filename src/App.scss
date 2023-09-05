@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  ol, ul, li, h1{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+    color: #333333;
+  }
+}
+
+
+
+#hd{
+    .hdwrap{
+    height: 60px;
+    background-color: #000;
+    padding: 0 50px;
+  }
+  a{
+    color: white;
+  }
+  
+  span{
+    color: white;
+  }
+  h1{
+    a{
+      height: 30px;
+      display: block;
+      img{
+        height: 100%;
+        display: block;
+      }
+
+    }
+  }
+  .gnb{
+    text-transform: uppercase;
+    .product{
+      &:hover{
+        padding-bottom: 30px;
+        margin-bottom: -30px;
+        .lnb{
+          pointer-events: all;
+          opacity: 1;
+        }
+      }
+      .lnb-img:hover+.lnb-text{
+        color: #8dcbed;
+      }
+      .lnb-text:hover{
+        color: #8dcbed;
+      }
+    }
+  }
+  .side-nav{
+      font-size: 26px;
+      height: 26px;
+      >li{
+      margin-left: 20px;
+      a{
+        display: block;
+      }
+    }
+    .language{
+      margin-right: 10px;
+      ul{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        z-index: 600;
+        top: 100%;
+        background-color: #000;
+      }
+      button{  
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        font-size: 16px;
+        background-color: transparent;
+        border: 0;
+        color: white;
+      }
+      &:hover ul{
+        max-height: 100px;
+      }
+    }
+  }  
+  &:hover{   
+    .hdwrap{
+      background-color: #000 !important;
+    } 
+    .language{ 
+      a{
+      background-color: #000;
+      }
+    }
+  }
+}
+
+
+  
+
+
+
+.lnb{
+  z-index: 500;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  background-color: #111111;
+  padding: 0 15%;
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+  .lnb-menu{
+    margin: 30px 10px;
+    width: calc(20% - 50px);
+    .lnb-img{
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      &:hover img{
+        transform: scale(1);
+      }
+      >a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        img{
+          width: 100%;
+          margin: auto;
+          transform: scale(0.85);
+          transition: 0.2s;
+        }
+      }
+      
+    }
+    .lnb-text{
+      margin-top: 30px;
+      margin-bottom: 20px;
+      display: block;
+      font-size: 20px;
+      transition: 0.8s;
+    }
+  }
+  
+}
+
+
+#banners{
+  .banner-img{
+    width: 100%;
+    height: 100vh;
+    >.banner-bg-img{
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .banner-text{
+      top: 62%;
+      left: 6%;
+      h2{
+        color: white;
+        font-size: 6rem;
+        text-shadow: 1px 1px 10px rgb(200, 200, 200);
+      }
+      span{
+        color: rgb(190, 190, 190);
+        font-size: 1.3rem;
+        text-shadow: 1px 2px 3px rgb(100, 100, 100)
+      }
+      a{
+        color: white;
+      }
+    }
+  }
+}
+
+
+
+

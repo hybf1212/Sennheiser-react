@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { LuSearch, LuShoppingCart, LuUser, LuChevronDown } from "react-icons/lu";
+import { Link } from 'react-router-dom';
+import { LuChevronDown } from "react-icons/lu";
+import { RxMagnifyingGlass, RxPerson, RxLockClosed } from "react-icons/rx";
 
 
 
@@ -8,16 +10,17 @@ import { LuSearch, LuShoppingCart, LuUser, LuChevronDown } from "react-icons/lu"
 const Header = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
+    const [languages, languageSet ]  = useState("kr");
 
     const handleScroll = () => {
-        // 스크롤 위치를 확인하고, 원하는 임계값에 따라 클래스를 추가 또는 제거합니다.
-        const threshold = 100; // 스크롤 임계값 설정
+       
+        const threshold = 100; 
     
         if (window.scrollY > threshold) {
-          // 스크롤 위치가 임계값을 넘으면 클래스를 추가합니다.
+          
           setIsScrolled(true);
         } else {
-          // 스크롤 위치가 임계값 이하면 클래스를 제거합니다.
+         
           setIsScrolled(false);
         }
     };
@@ -35,17 +38,15 @@ const Header = () => {
    
 
 
-
-
     return (
         <div id='hd' className='fixed-top'>
-            <div className='position-relative'>
+            
                 <div className={ `hdwrap d-flex justify-content-between align-items-center ${ isScrolled ? 'bg-transparent' : '' }` }>
-                    <h1><a href=""><img src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo.svg`} alt="top-logo" /></a></h1>
+                    <h1><Link to='/'><img src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo.svg`} alt="top-logo" /></Link></h1>
                     <ul className='gnb d-flex'>
                         <li className='product mx-3'>
-                            <a href="">Product<LuChevronDown/></a>
-                            <ul className='lnb position-absolute d-flex justify-content-center align-items-center'>
+                            <a href="">Product<LuChevronDown className='ms-1'/></a>
+                            <ul className='lnb position-absolute d-flex justify-content-center align-items-center text-center'>
                                 <li className='lnb-menu'>
                                     <div className='lnb-img'><a href=""><img src={`${process.env.PUBLIC_URL}/img/lnbimg/ie_600_product_shot.png`} alt="" /></a></div>
                                     <a className='lnb-text' href="">이어폰</a>
@@ -72,19 +73,21 @@ const Header = () => {
                         <li className='mx-3'><a href="">Downloads</a></li>
                     </ul>
                     <ul className='side-nav d-flex align-items-center'>
-                        <div className='language position-relative'>
-                            <a href="">KR<LuChevronDown/></a>
-                            <ul className='position-absolute'>
-                                <li><a href="">JP</a></li>
-                                <li><a href="">GB</a></li>
-                            </ul>
-                        </div>
-                        <li><a href=""><LuSearch className='d-block' /></a></li>
-                        <li><a href=""><LuUser className='d-block' /></a></li>
-                        <li><a href=""><LuShoppingCart className='d-block' /></a></li>
+                        <li>
+                            <div className='language position-relative'>
+                                <button onClick={ ()=>{ languageSet('kr')}}>KR<LuChevronDown/></button>
+                                <ul className='position-absolute'>
+                                    <li><button onClick={ ()=>{ languageSet('jp')}}>JP</button></li>
+                                    <li><button onClick={ ()=>{ languageSet('eng')}}>ENG</button></li>
+                                </ul>
+                            </div>
+                        </li>                        
+                        <li><Link to='/serach'><RxMagnifyingGlass className='d-block' /></Link></li>
+                        <li><Link to='/serach'><RxPerson className='d-block' /></Link></li>
+                        <li><Link to='/cart'><RxLockClosed className='d-block' /></Link></li>
                     </ul>
                 </div>
-            </div>            
+                    
         </div>
     )
 }
