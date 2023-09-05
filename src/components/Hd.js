@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { LuChevronDown } from "react-icons/lu";
-import { RxMagnifyingGlass, RxPerson, RxLockClosed } from "react-icons/rx";
+
+import sicon from '../svg/search.svg';
+import cicon from '../svg/cart.svg';
+import uicon from '../svg/user.svg'
 
 
 
@@ -9,8 +12,9 @@ import { RxMagnifyingGlass, RxPerson, RxLockClosed } from "react-icons/rx";
 
 const Header = () => {
 
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [languages, languageSet ]  = useState("kr");
+    const [ isScrolled, setIsScrolled] = useState(false);
+    const [ languages, languageSet ]  = useState("kr");
+    const [ searchv, searchvShow] = useState(false);
 
     const handleScroll = () => {
        
@@ -39,6 +43,9 @@ const Header = () => {
 
 
     return (
+        <>
+        { searchv && <button  onClick={ ()=>{ searchvShow(false) }} className='text-white' style={{height:500}}>버튼</button> }
+        
         <div id='hd' className='fixed-top'>
             
                 <div className={ `hdwrap d-flex justify-content-between align-items-center ${ isScrolled ? 'bg-transparent' : '' }` }>
@@ -82,13 +89,14 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>                        
-                        <li><Link to='/serach'><RxMagnifyingGlass className='d-block' /></Link></li>
-                        <li><Link to='/serach'><RxPerson className='d-block' /></Link></li>
-                        <li><Link to='/cart'><RxLockClosed className='d-block' /></Link></li>
+                        <li><button onClick={ ()=>{ searchvShow(true)}} ><img src={sicon} /></button></li>
+                        <li><Link to='/user'><img src={uicon} /></Link></li>
+                        <li><Link to='/cart'><img src={cicon} /></Link></li>
                     </ul>
                 </div>
                     
         </div>
+        </>
     )
 }
 

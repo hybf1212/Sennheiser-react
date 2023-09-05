@@ -7,7 +7,7 @@ const Banners = () => {
                 <div className='banner-bg-img' style={{backgroundImage: `url(${process.env.PUBLIC_URL}/img/bannerimg/Ambeo_SB_Plus_Set2_Cheetah_RGB_150dpi_smaller.jpg)`}}></div>
                 <div className='banner-text position-absolute'>
                     <h2>AMBEO Soundbar Plus</h2>
-                    <span>Virtual 7.1.4. 경험해보지 못했던 사운드의 세계로 당신을 초대합니다</span>
+                    <span>Virtual 7.1.4. 경험해보지 못했던 소리의 세계를 느껴보세요.</span>
                     <div className='banner-button'><a href=""></a></div>
                 </div>
             </div>
@@ -23,7 +23,7 @@ const Banners = () => {
                 <div className='banner-bg-img' style={{backgroundImage: `url(${process.env.PUBLIC_URL}/img/bannerimg/HE_1_Tubes_Product_shot_Front_black_2.jpg)`}}></div>
                 <div className='banner-text position-absolute'>
                     <h2>Audiophile</h2>
-                    <span>오디오필의 세계로 당신을 초대합니다</span>
+                    <span>오디오필의 세계로 당신을 초대합니다.</span>
                     <div className='banner-button'><a href=""></a></div>
                 </div>
             </div>

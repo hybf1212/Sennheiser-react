@@ -5,6 +5,7 @@ import Cart from './components/Cart';
 import Search from './components/Search';
 
 import Hd from './components/Hd'
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
         <Route path="/" element={<Banners></Banners>} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/search" element={<Search />} />
-    </Routes>
-
+      </Routes>
+      <Footer></Footer>
       
     </>
   );

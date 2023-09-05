@@ -16,9 +16,9 @@
 
 #hd{
     .hdwrap{
-    height: 60px;
+    
     background-color: #000;
-    padding: 0 50px;
+    padding:14px 50px;
   }
   a{
     color: white;
@@ -29,7 +29,7 @@
   }
   h1{
     a{
-      height: 30px;
+      height: 21px;
       display: block;
       img{
         height: 100%;
@@ -39,7 +39,7 @@
     }
   }
   .gnb{
-    text-transform: uppercase;
+    // text-transform: uppercase;
     .product{
       &:hover{
         padding-bottom: 30px;
@@ -50,20 +50,25 @@
         }
       }
       .lnb-img:hover+.lnb-text{
-        color: #8dcbed;
+        color: #fce7aa;
       }
       .lnb-text:hover{
-        color: #8dcbed;
+        color: #fce7aa;
       }
     }
   }
   .side-nav{
-      font-size: 26px;
-      height: 26px;
       >li{
       margin-left: 20px;
       a{
         display: block;
+        img{
+          transform: scale(0.89);
+        }
+      }
+      button{
+        background-color: transparent;
+        border: 0;
       }
     }
     .language{
@@ -74,16 +79,17 @@
         overflow: hidden;
         z-index: 600;
         top: 100%;
-        background-color: #000;
+        background-color: #000000;
       }
       button{  
         display: block;
         width: 100%;
         padding: 6px 12px;
-        font-size: 16px;
+        font-size: 14px;
         background-color: transparent;
         border: 0;
         color: white;
+        text-align: left;
       }
       &:hover ul{
         max-height: 100px;
@@ -92,11 +98,11 @@
   }  
   &:hover{   
     .hdwrap{
-      background-color: #000 !important;
+      background-color: #000000 !important;
     } 
     .language{ 
       a{
-      background-color: #000;
+      background-color: #000000;
       }
     }
   }
@@ -166,15 +172,15 @@
       background-attachment: fixed;
     }
     .banner-text{
-      top: 62%;
+      top: 63%;
       left: 6%;
       h2{
         color: white;
         font-size: 6rem;
-        text-shadow: 1px 1px 10px rgb(200, 200, 200);
+        text-shadow: 1px 1px 10px rgb(190, 190, 190);
       }
       span{
-        color: rgb(190, 190, 190);
+        color: rgb(200, 200, 200);
         font-size: 1.3rem;
         text-shadow: 1px 2px 3px rgb(100, 100, 100)
       }
