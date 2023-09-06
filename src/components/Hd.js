@@ -47,8 +47,7 @@ const Header = () => {
         { searchv && <button  onClick={ ()=>{ searchvShow(false) }} className='text-white' style={{height:500}}>버튼</button> }
         
         <div id='hd' className='fixed-top'>
-            <div className={`hd-ad ${ isScrolled ? 'go-up' : '' }`}><a className='d-block text-center' href=""><span>회원가입 후 첫 구매시 10% 할인 코드 제공</span></a></div>
-            
+            <div className={`hd-ad ${ isScrolled ? 'go-up' : '' }`}><a className='d-block text-center' href=""><span>회원가입 후 첫 구매시 10% 할인 코드 제공</span></a></div>            
             <div className={ `hdwrap d-flex justify-content-between align-items-center bg-transparent` }>
                 <h1><Link to='/'><img src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo.svg`} alt="top-logo" /></Link></h1>
                 <ul className='gnb d-flex'>
