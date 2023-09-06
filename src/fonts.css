@@ -7,3 +7,8 @@
     font-family: NotoSansKR;
     src: url(./fonts/NotoSansKR-VariableFont_wght.ttf);
 }
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Black.ttf);
+}
