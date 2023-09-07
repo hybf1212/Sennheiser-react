@@ -8,11 +8,13 @@ import Hd from './components/Hd'
 import Footer from './components/footer';
 import Slide from './components/Slide';
 
+import db from './data/db.json'
+
 function App() {
   return (
     <>
       <Hd></Hd>
-      <Slide></Slide>
+      <Slide info={db.kr}></Slide>
       <Routes>
         <Route path="/" element={<Banners></Banners>} />
         <Route path="/cart" element={<Cart />} />

@@ -2,7 +2,37 @@
     "kr" :{
         "gnb" :{
             
-        }
+        },
+        "swiperdb" : [            
+            {
+                "src" : "/img/slideimg/Ambeo_SB_Plus_Set2_Cheetah_RGB_150dpi_smaller.jpg",
+                "h2" : "AMBEO Soundbar Plus",
+                "p" : "Virtual 7.1.4. 새로운 세상이 펼쳐진다",
+                "style" : "justify-content-center align-items-end",
+                "textstyle": " text-end"
+            },
+            {
+                "src" : "/img/slideimg/Hero_Desktop_M4_Wireless_KV.jpg",
+                "h2" : "MOMENTUM 4 Wireless",
+                "p" : "어디에서도 느껴보지 못한 감각",
+                "style" : "justify-content-center align-items-end",
+                "textstyle": " text-end"
+            },
+            {
+                "src" : "/img/slideimg/x1_desktop_Sennheiser-Korea-Webshop-Homepage-Banner-Image.jpg",
+                "h2" : "True Wireless Series",
+                "p" : "당신의 하루를 자유롭게",
+                "style" : "justify-content-center align-items-end",
+                "textstyle": " text-end"
+            },
+            {
+                "src" : "/img/slideimg/220614_SENNHEISER_Indoorlifestyle_1863_1.jpg",
+                "h2" : "PROMOTION",
+                "p" : "공식몰에서 최대 30% 할인된 제품을 만나보세요",
+                "style" : "justify-content-center align-items-center",
+                "textstyle": " text-center"
+             }
+            ]
 
     },
     "eng" :{

@@ -4,7 +4,11 @@ import { LuChevronDown } from "react-icons/lu";
 
 import sicon from '../svg/search.svg';
 import cicon from '../svg/cart.svg';
-import uicon from '../svg/user.svg'
+import uicon from '../svg/user.svg';
+
+import siconb from '../svg/search_b.svg';
+import ciconb from '../svg/cart-b.svg';
+import uiconb from '../svg/user-b.svg';
 
 
 
@@ -20,14 +24,16 @@ const Header = () => {
        
         const threshold = 0; 
     
-        if (window.scrollY > threshold) {
-          
-          setIsScrolled(true);
+        if (window.scrollY > threshold) {          
+            document.querySelector('#hd').classList.add('white-img')
         } else {
          
-          setIsScrolled(false);
+            document.querySelector('#hd').classList.remove('white-img')
         }
+
+       
     };
+
 
     useEffect(() => {
           window.addEventListener('scroll', handleScroll);
@@ -47,9 +53,14 @@ const Header = () => {
         { searchv && <button  onClick={ ()=>{ searchvShow(false) }} className='text-white' style={{height:500}}>버튼</button> }
         
         <div id='hd' className='fixed-top'>
-            <div className={`hd-ad ${ isScrolled ? 'go-up' : '' }`}><a className='d-block text-center' href=""><span>회원가입 후 첫 구매시 10% 할인 코드 제공</span></a></div>            
+            <div className='hd-ad'><a className='d-block text-center' href=""><span>회원가입 후 첫 구매시 10% 할인 코드 제공</span></a></div>            
             <div className={ `hdwrap d-flex justify-content-between align-items-center ${ isScrolled ? 'bg-transparent' : '' }` }>
-                <h1><Link to='/'><img src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo.svg`} alt="top-logo" /></Link></h1>
+                <h1>
+                    <Link to='/'>
+                        <img className='top-w' src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo_w.svg`} alt="top-logo_w" />
+                        <img className='top-b' src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo_b.svg`} alt="top-logo_b" />
+                    </Link>
+                </h1>
                 <ul className='gnb d-flex'>
                     <li className='product mx-3'>
                         <a href="">Product<LuChevronDown className='ms-1'/></a>
@@ -89,9 +100,12 @@ const Header = () => {
                             </ul>
                         </div>
                     </li>                        
-                    <li><button onClick={ ()=>{ searchvShow(true)}} ><img src={sicon} /></button></li>
-                    <li><Link to='/user'><img src={uicon} /></Link></li>
-                    <li><Link to='/cart'><img src={cicon} /></Link></li>
+                    <li>
+                        <button className='top-w' onClick={ ()=>{ searchvShow(true)}} ><img src={sicon} /></button>
+                        <button className='top-b' onClick={ ()=>{ searchvShow(true)}} ><img src={siconb} /></button>
+                    </li>
+                    <li><Link to='/user'><img className='top-w' src={uicon} /><img className='top-b' src={uiconb} /></Link></li>
+                    <li><Link to='/cart'><img className='top-w' src={cicon} /><img className='top-b' src={ciconb} /></Link></li>
                 </ul>
             </div>
                     
