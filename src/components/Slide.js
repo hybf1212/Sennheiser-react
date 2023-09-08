@@ -33,7 +33,7 @@ const Slide = (props) => {
             {
                 props.info.swiperdb.map((v, i)=>{
                     return (
-                        <SwiperSlide className={' swiperslide'+i } style={{background : `url(${v.src}) no-repeat center`,backgroundSize : "cover"}}>
+                        <SwiperSlide key={`ss${i}`} className={' swiperslide'+i } style={{background : `url(${v.src}) no-repeat center`,backgroundSize : "cover"}}>
                             <div className={`container py-5 mt-5 h-100 d-flex flex-wrap flex-column ${v.style}`}>
                                 <div className={`slide-text  ${v.textstyle}`}>
                                     <div className='slide-text-h2'><h2 className='nondrag'>{v.h2}</h2></div>

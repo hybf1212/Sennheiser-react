@@ -9,12 +9,14 @@ import Footer from './components/footer';
 import Slide from './components/Slide';
 
 import db from './data/db.json'
+import BestSelling from './components/BestSelling';
 
 function App() {
   return (
     <>
       <Hd></Hd>
       <Slide info={db.kr}></Slide>
+      <BestSelling info={db.kr}></BestSelling>
       <Routes>
         <Route path="/" element={<Banners></Banners>} />
         <Route path="/cart" element={<Cart />} />

@@ -3,6 +3,32 @@
         "gnb" :{
             
         },
+        "bestsellingdb" : [
+            {
+                "link" : "https://www.sennheiserkorea.com/products/conversation-clear-plus",
+                "alt" : "Conversation Clear Plus",
+                "src" : "/img/bestimg/ConvClear_preview_image.jpg",
+                "name" : "Conversation Clear Plus",
+                "price" : "₩ 1,190,000"
+            },
+            {
+                "link" : "https://www.sennheiserkorea.com/products/509266",
+                "alt" : "MOMENTUM 4 Wireless",
+                "src" : "/img/bestimg/Preview_M4_Black.jpg",
+                "name" : "MOMENTUM 4 Wireless",
+                "price" : "₩ 499,000"
+            },
+            {
+                "link" : "https://www.sennheiserkorea.com/products/700240",
+                "alt" : "HD 660S2",
+                "src" : "/img/bestimg/HD_660S2_PreviewImage.jpg",
+                "name" : "HD 660S2",
+                "price" : "₩ 799,000"
+            }
+        ],
+
+
+
         "swiperdb" : [            
             {
                 "src" : "/img/slideimg/Ambeo_SB_Plus_Set2_Cheetah_RGB_150dpi_smaller.jpg",
@@ -22,8 +48,8 @@
                 "src" : "/img/slideimg/x1_desktop_Sennheiser-Korea-Webshop-Homepage-Banner-Image.jpg",
                 "h2" : "True Wireless Series",
                 "p" : "당신의 하루를 자유롭게",
-                "style" : "justify-content-center align-items-end",
-                "textstyle": " text-end"
+                "style" : "justify-content-center align-items-start",
+                "textstyle": " text-start"
             },
             {
                 "src" : "/img/slideimg/220614_SENNHEISER_Indoorlifestyle_1863_1.jpg",
