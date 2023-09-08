@@ -293,13 +293,13 @@
 #best-selling{
   background-color: #000000;
   color: white;
-  padding: 160px 0 180px 0;
+  padding: 160px 0 200px 0;
   
   .best-products{
     .b-p-items{
       background-color: white;
       border-radius: 16px;
-      padding: 30px 40px;
+      padding: 30px 30px;
       a{
         color: #222;
         font-size: 1.1rem;
@@ -460,3 +460,34 @@
   }
 }
 
+
+#search-popup{
+  
+  background-color: rgba($color: #000000, $alpha:0.8);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  .search-wrap{
+    height: 100%;
+    width: 100%;
+    .search-close-button{
+      top: 200px;
+      right: 20%;
+    }
+    .search-input{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);      
+      border: 0;
+      padding: 10px 20px;
+      background-color: #4d4d4d;
+      width: 90%;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+  
+}

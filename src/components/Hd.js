@@ -35,6 +35,7 @@ const Header = (props) => {
     };
 
 
+
     useEffect(() => {
           window.addEventListener('scroll', handleScroll);
     
@@ -43,14 +44,23 @@ const Header = (props) => {
         };
       }, []);
 
-    
+
+          
 
    
 
 
     return (
         <>
-        { searchv && <button  onClick={ ()=>{ searchvShow(false) }} className='text-white' style={{height:500}}>버튼</button> }
+        { searchv && 
+            <div id='search-popup' className='fixed-top'>
+                <div className='search-wrap position-relative'>
+                    <button onClick={ ()=>{ searchvShow(false) }} className='search-close-button position-absolute'>닫기</button>
+                    <input type="text" name='senn-search' maxLength={255} className='search-input position-absolute'/>
+                </div>                
+            </div>
+             
+        }
         
         <div id='hd' className='fixed-top'>
             <div className='hd-ad'><a className='d-block text-center' href="#none"><span>회원가입 후 첫 구매시 10% 할인 코드 제공</span></a></div>            
@@ -94,8 +104,8 @@ const Header = (props) => {
                         </div>
                     </li>                        
                     <li>
-                        <button className='top-w' onClick={ ()=>{ searchvShow(true)}} ><img src={sicon} /></button>
-                        <button className='top-b' onClick={ ()=>{ searchvShow(true)}} ><img src={siconb} /></button>
+                        <button className='side-search top-w' onClick={ ()=>{ searchvShow(true); }} ><img src={sicon} /></button>
+                        <button className='side-search top-b' onClick={ ()=>{ searchvShow(true)}} ><img src={siconb} /></button>
                     </li>
                     <li><Link to='/user'><img className='top-w' src={uicon} /><img className='top-b' src={uiconb} /></Link></li>
                     <li><a href="https://www.sennheiserkorea.com/cart"><img className='top-w' src={cicon} /><img className='top-b' src={ciconb} /></a></li>
