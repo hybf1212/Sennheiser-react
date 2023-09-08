@@ -7,12 +7,12 @@ const BestSelling = (props) => {
                 <div className='mb-5 ms-3'>
                     <h2>베스트셀러</h2>
                 </div>
-                <div className='best-products d-flex'>
+                <div className='best-products d-flex flex-wrap'>
 
                     {
                         props.info.bestsellingdb.map((v,i)=>{
                             return(
-                                <div key={`b-p-${i}`} className="col-4">     
+                                <div key={`b-p-${i}`} className="col-xl-4 col-6 my-3">     
                                     <div className='b-p-items mx-3'>
                                         <div className='b-p-img position-relative'>
                                             <a className='d-block position-absolute d-flex' href={v.link}>
