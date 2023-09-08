@@ -19,7 +19,7 @@ function App() {
       <Benefits></Benefits>
       <BestSelling info={db.kr}></BestSelling>
       <Routes>
-        <Route path="/" element={<Banners></Banners>} />
+        <Route path="/" element={<Banners info={db.kr}></Banners>} />
         <Route path="/search" element={<Search />} />
       </Routes>
       <Footer></Footer>

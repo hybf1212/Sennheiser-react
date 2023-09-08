@@ -32,6 +32,8 @@
                 "name" : "부품"
             }
         ],
+
+
         "bestsellingdb" : [
             {
                 "link" : "https://www.sennheiserkorea.com/products/conversation-clear-plus",
@@ -86,8 +88,26 @@
                 "p" : "공식몰에서 최대 30% 할인된 제품을 만나보세요",
                 "style" : "justify-content-center align-items-center",
                 "textstyle": " text-center"
-             }
-            ]
+            }
+        ],
+
+
+        "bannersdb" : [
+            {
+                "bgsrc" : "/img/bannerimg/HE_1_Tubes_Product_shot_Front_black_2.jpg",
+                "title" : "Audiophile",
+                "text" : "오디오필의 세계로 당신을 초대합니다.",
+                "link" : "https://www.sennheiserkorea.com/collections/audiophile",
+                "btntext" : "자세히보기"
+            },
+            {
+                "bgsrc" : "/img/bannerimg/x1_tablet_Profile_USB_Microphone_Gamer_In_Use_21.jpg",
+                "title" : "Profile USB Microphone",
+                "text" : "여러분의 이야기를 말해주세요. 전세계와 공유하세요.",
+                "link" : "https://ko-kr.sennheiser.com/profile-mic-story",
+                "btntext" : "자세히보기"
+            }
+        ]
 
     },
     "eng" :{
