@@ -4,8 +4,8 @@ const BestSelling = (props) => {
     return(
         <div id='best-selling'>
             <div className="container">
-                <div className='mb-5 ms-3'>
-                    <h2>베스트셀러</h2>
+                <div className='mb-5 mx-3'>
+                    <h2 className='nondrag'>베스트셀러</h2>
                 </div>
                 <div className='best-products d-flex flex-wrap'>
 

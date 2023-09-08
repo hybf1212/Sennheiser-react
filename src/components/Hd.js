@@ -14,7 +14,7 @@ import uiconb from '../svg/user-b.svg';
 
 
 
-const Header = () => {
+const Header = (props) => {
 
     const [ isScrolled, setIsScrolled] = useState(false);
     const [ languages, languageSet ]  = useState("kr");
@@ -53,7 +53,7 @@ const Header = () => {
         { searchv && <button  onClick={ ()=>{ searchvShow(false) }} className='text-white' style={{height:500}}>버튼</button> }
         
         <div id='hd' className='fixed-top'>
-            <div className='hd-ad'><a className='d-block text-center' href=""><span>회원가입 후 첫 구매시 10% 할인 코드 제공</span></a></div>            
+            <div className='hd-ad'><a className='d-block text-center' href="#none"><span>회원가입 후 첫 구매시 10% 할인 코드 제공</span></a></div>            
             <div className={ `hdwrap d-flex justify-content-between align-items-center ${ isScrolled ? 'bg-transparent' : '' }` }>
                 <h1>
                     <Link to='/'>
@@ -63,32 +63,25 @@ const Header = () => {
                 </h1>
                 <ul className='gnb d-flex'>
                     <li className='product mx-3'>
-                        <a href="">Product<LuChevronDown className='ms-1'/></a>
+                        <a href="https://www.sennheiserkorea.com/collections/all-products">Product<LuChevronDown className='ms-1'/></a>
                         <ul className='lnb position-absolute d-flex justify-content-center align-items-center text-center'>
-                            <li className='lnb-menu'>
-                                <div className='lnb-img'><a href=""><img src={`${process.env.PUBLIC_URL}/img/lnbimg/ie_600_product_shot.png`} alt="" /></a></div>
-                                <a className='lnb-text' href="">이어폰</a>
-                            </li>                            
-                            <li className='lnb-menu'>
-                                <div className='lnb-img'><a href=""><img src={`${process.env.PUBLIC_URL}/img/lnbimg/HD_660S2_ATF_Main_Image.png`} alt="" /></a></div>
-                                <a className='lnb-text' href="">헤드폰</a>
-                            </li>
-                            <li className='lnb-menu'>
-                                <div className='lnb-img'><a href=""><img src={`${process.env.PUBLIC_URL}/img/lnbimg/soundbar_plus_iso_front_dolby_atmos_final.png`} alt="" /></a></div>
-                                <a className='lnb-text' href="">AMBEO</a>
-                            </li>
-                            <li className='lnb-menu'>
-                                <div className='lnb-img'><a href=""><img src={`${process.env.PUBLIC_URL}/img/lnbimg/product_detail_x2_desktop_HDV-820_1_Sennheiser.png`} alt="" /></a></div>
-                                <a className='lnb-text' href="">기타</a>
-                            </li>
-                            <li className='lnb-menu'>
-                                <div className='lnb-img'><a href=""><img src={`${process.env.PUBLIC_URL}/img/lnbimg/product_detail_x2_desktop_Sennheiser_accessory_HD600_cable_and_adapter.png`} alt="" /></a></div>
-                                <a className='lnb-text' href="">부품/ACC</a>
-                            </li>
+
+                            {
+                                props.info.gnbdb.map((v,i)=>{
+                                    return(
+                                        <li className='lnb-menu'>
+                                            <div className='lnb-img'><a href={v.link}><img src={`${process.env.PUBLIC_URL}${v.src}`} alt={v.alt} /></a></div>
+                                            <a className='lnb-text' href={v.link}>{v.name}</a>
+                                        </li>
+                                    )
+                                })
+                            }
+
+                        
                         </ul>
                     </li>
-                    <li className='mx-3'><a href="">Support</a></li>
-                    <li className='mx-3'><a href="">Downloads</a></li>
+                    <li className='mx-3'><a href="https://www.sennheiserkorea.com/pages/service-center">Support</a></li>
+                    <li className='mx-3'><a href="https://ko-kr.sennheiser.com/download">Downloads</a></li>
                 </ul>
                 <ul className='side-nav d-flex align-items-center'>
                     <li>
@@ -105,7 +98,7 @@ const Header = () => {
                         <button className='top-b' onClick={ ()=>{ searchvShow(true)}} ><img src={siconb} /></button>
                     </li>
                     <li><Link to='/user'><img className='top-w' src={uicon} /><img className='top-b' src={uiconb} /></Link></li>
-                    <li><Link to='/cart'><img className='top-w' src={cicon} /><img className='top-b' src={ciconb} /></Link></li>
+                    <li><a href="https://www.sennheiserkorea.com/cart"><img className='top-w' src={cicon} /><img className='top-b' src={ciconb} /></a></li>
                 </ul>
             </div>
                     
