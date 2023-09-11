@@ -9,6 +9,7 @@ import Footer from './components/footer';
 import Slide from './components/Slide';
 import BestSelling from './components/BestSelling';
 import Benefits from './components/Benefits';
+import Support from './components/Support';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Banners info={db.kr}></Banners>} />
       </Routes>
+      <Support></Support>
       <Footer></Footer>
       
     </>
