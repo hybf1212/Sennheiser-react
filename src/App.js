@@ -1,7 +1,6 @@
 import './App.scss';
 import { Route, Routes } from 'react-router-dom';
 import Banners from './components/Banners';
-import Search from './components/Search';
 
 import db from './data/db.json'
 
@@ -20,7 +19,6 @@ function App() {
       <BestSelling info={db.kr}></BestSelling>
       <Routes>
         <Route path="/" element={<Banners info={db.kr}></Banners>} />
-        <Route path="/search" element={<Search />} />
       </Routes>
       <Footer></Footer>
       

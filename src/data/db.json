@@ -94,6 +94,13 @@
 
         "bannersdb" : [
             {
+                "bgsrc" : "/img/bannerimg/x1_desktop_XSW_IEM_In_Use_shot_W5A055722.jpg",
+                "title" : "XS Wireless IEM",
+                "text" : "무대 위 또 다른 나의 모습.",
+                "link" : "https://ko-kr.sennheiser.com/xsw-iem-set",
+                "btntext" : "자세히보기"
+            },
+            {
                 "bgsrc" : "/img/bannerimg/HE_1_Tubes_Product_shot_Front_black_2.jpg",
                 "title" : "Audiophile",
                 "text" : "오디오필의 세계로 당신을 초대합니다.",
@@ -107,6 +114,7 @@
                 "link" : "https://ko-kr.sennheiser.com/profile-mic-story",
                 "btntext" : "자세히보기"
             }
+            
         ]
 
     },
