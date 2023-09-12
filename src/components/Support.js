@@ -13,7 +13,7 @@ const Support = () => {
                     </div>                    
                 </div>
                 <div className='support-input d-flex flex-column justify-content-center'>
-                    <div className='container'>
+                    <div className='container-md'>
                         <form action="#" className='d-flex justify-content-between align-items-center'>
                             <label htmlFor='item-name'>제품명</label><input id='item-name' type="text" className='flex-grow-1' placeholder='제품명을 입력해주세요.'/>
                             <button className='support-search-button ms-4 flex-nowrap' type='button'>검색</button>
