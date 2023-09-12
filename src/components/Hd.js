@@ -113,7 +113,7 @@ const Header = (props) => {
                         </li>
                         <li><Link to='#'><img className='top-w' src={uicon} /><img className='top-b' src={uiconb} /></Link></li>
                         <li><a href="https://www.sennheiserkorea.com/cart"><img className='top-w' src={cicon} /><img className='top-b' src={ciconb} /></a></li>
-                        <li className='menu-icon mx-3'>
+                        <li className='menu-icon ms-3'>
                             <button className='top-w' onClick={toggleSideMenu}>
                                 <img src={menuicon} alt="메뉴" />                                
                             </button>
