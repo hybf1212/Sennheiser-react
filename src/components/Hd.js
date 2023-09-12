@@ -71,7 +71,7 @@ const Header = (props) => {
                             <ul className='lnb position-absolute d-flex justify-content-center align-items-center text-center'>
                                 {props.info.gnbdb.map((v, i) => {
                                     return (
-                                        <li className='lnb-menu'>
+                                        <li key={i} className='lnb-menu'>
                                             <div className='lnb-img'><a href={v.link}><img src={`${process.env.PUBLIC_URL}${v.src}`} alt={v.alt} /></a></div>
                                             <a className='lnb-text' href={v.link}>{v.name}</a>
                                         </li>
