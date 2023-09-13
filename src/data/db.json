@@ -119,6 +119,28 @@
                 "btntext" : "자세히보기"
             }
             
+        ],
+        "mproductsdb" : [
+            {
+                "link" : "https://www.sennheiserkorea.com/collections/all-products?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Audiophile-Earbuds&filter.p.product_type=Earbuds-Wired&filter.p.product_type=Earbuds-Wireless&sort_by=manual",
+                "nm" : "이어폰"
+            },
+            {
+                "link" : "https://www.sennheiserkorea.com/collections/all-products?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Audiophile-Headphones&filter.p.product_type=Headphones-Wireless&sort_by=manual",
+                "nm" : "헤드폰"
+            },
+            {
+                "link" : "https://www.sennheiserkorea.com/collections/ambeo-soundbar",
+                "nm" : "AMBEO"
+            },
+            {
+                "link" : "https://www.sennheiserkorea.com/collections/transmitter",
+                "nm" : "기타"
+            },
+            {
+                "link" : "https://www.sennheiserkorea.com/collections/spare-parts",
+                "nm" : "부품"
+            }
         ]
 
     },

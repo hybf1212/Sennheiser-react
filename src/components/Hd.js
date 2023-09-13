@@ -137,11 +137,14 @@ const Header = (props) => {
                                 <button onClick={toggleSubMenu}><LiaPlusSolid color='#ddd'/></button>                                
                             </div>
                             <ul className='m-lnb'>
-                                <li><a href="https://www.sennheiserkorea.com/collections/all-products?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Audiophile-Earbuds&filter.p.product_type=Earbuds-Wired&filter.p.product_type=Earbuds-Wireless&sort_by=manual">이어폰</a></li>
-                                <li><a href="https://www.sennheiserkorea.com/collections/all-products?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Audiophile-Headphones&filter.p.product_type=Headphones-Wireless&sort_by=manual">헤드폰</a></li>
-                                <li><a href="https://www.sennheiserkorea.com/collections/ambeo-soundbar">AMBEO</a></li>
-                                <li><a href="https://www.sennheiserkorea.com/collections/transmitter">기타</a></li>
-                                <li><a href="https://www.sennheiserkorea.com/collections/spare-parts">부품</a></li>
+
+                                {props.info.mproductsdb.map((v,i)=>{
+                                    return(
+                                        <li><a href={v.link}>{v.nm}</a></li>
+                                    )                                      
+                                                                       
+                                })}            
+
                             </ul>
                             <div className='m-gnb mb-2'><a href="https://www.sennheiserkorea.com/pages/service-center">Support</a></div>
                             <div className='m-gnb mb-2'><a href="https://ko-kr.sennheiser.com/download">Downloads</a></div>                        
