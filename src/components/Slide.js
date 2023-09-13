@@ -38,7 +38,7 @@ const Slide = (props) => {
                                 <div className={`slide-text  ${v.textstyle}`}>
                                     <div className='slide-text-h2'><h2 className='nondrag'>{v.h2}</h2></div>
                                     <div className='slide-text-p'><p className='nondrag'>{v.p}</p></div>
-                                    <div className='slide-button'><a href="">READ MORE</a></div>
+                                    <div className='slide-button'><a href={v.link}>READ MORE</a></div>
                                 </div>
                             </div>                                
                         </SwiperSlide>
