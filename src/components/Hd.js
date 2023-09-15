@@ -76,8 +76,8 @@ const Header = (props) => {
                 <div className={`hdwrap d-flex justify-content-between align-items-center ${isScrolled ? 'bg-transparent' : ''}`}>
                     <h1>
                         <Link to='/'>
-                            <img className='top-w' src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo_w.svg`} alt="top-logo_w" />
-                            <img className='top-b' src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo_b.svg`} alt="top-logo_b" />
+                            <img className='top-w-logo' src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo_w.svg`} alt="top-logo_w" />
+                            <img className='top-b-logo' src={`${process.env.PUBLIC_URL}/img/Sennheiser_logo_b.svg`} alt="top-logo_b" />
                         </Link>
                     </h1>
                     <ul className='gnb d-flex'>
@@ -107,12 +107,21 @@ const Header = (props) => {
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li className='m-disable'>
                             <button className='side-search top-w' onClick={() => { setSearchv(true); }}><img src={sicon} /></button>
                             <button className='side-search top-b' onClick={() => { setSearchv(true) }}><img src={siconb} /></button>
                         </li>
-                        <li><Link to='#'><img className='top-w' src={uicon} /><img className='top-b' src={uiconb} /></Link></li>
-                        <li><a href="https://www.sennheiserkorea.com/cart"><img className='top-w' src={cicon} /><img className='top-b' src={ciconb} /></a></li>
+                        <li className='m-disable'>
+                            <a href="https://www.sennheiserkorea.com/account/login">
+                                <img className='top-w' src={uicon} /><img className='top-b' src={uiconb} />
+                            </a>
+                        </li>
+                        <li className='m-disable'>
+                            <a href="https://www.sennheiserkorea.com/cart">
+                                <img className='top-w' src={cicon} />
+                                <img className='top-b' src={ciconb} />
+                            </a>
+                        </li>
                         <li className='menu-icon ms-3'>
                             <button className='top-w' onClick={toggleSideMenu}>
                                 <img src={menuicon} alt="메뉴" />                                
@@ -131,8 +140,8 @@ const Header = (props) => {
                         <div className='d-flex justify-content-end'>
                             <button className='menu-close-button' onClick={toggleSideMenu}><img src={closeicon} alt="닫기" /></button>
                         </div>                        
-                        <div className='side-menu-link position-relative'>                            
-                            <div className='m-gnb my-2 d-flex justify-content-between'>
+                        <div className='side-menu-link'>                            
+                            <div className='m-gnb mt-2 d-flex justify-content-between'>
                                 <a href="https://www.sennheiserkorea.com/collections/all-products">Product</a>
                                 <button onClick={toggleSubMenu}><LiaPlusSolid color='#ddd'/></button>                                
                             </div>
@@ -140,14 +149,21 @@ const Header = (props) => {
 
                                 {props.info.mproductsdb.map((v,i)=>{
                                     return(
-                                        <li><a href={v.link}>{v.nm}</a></li>
+                                        <li key={i}><a href={v.link}>{v.nm}</a></li>
                                     )                                      
                                                                        
                                 })}            
 
                             </ul>
-                            <div className='m-gnb mb-2'><a href="https://www.sennheiserkorea.com/pages/service-center">Support</a></div>
-                            <div className='m-gnb mb-2'><a href="https://ko-kr.sennheiser.com/download">Downloads</a></div>                        
+                            <div className='m-gnb mt-2'><a href="https://www.sennheiserkorea.com/pages/service-center">Support</a></div>
+                            <div className='m-gnb my-2'><a href="https://ko-kr.sennheiser.com/download">Downloads</a></div>                        
+                        </div>
+                        <div className="side-menu-sub">                            
+                            <ul>
+                                <li><button onClick={() => { setSearchv(true); }}>Search</button></li>
+                                <li className='mt-2'><a href="https://www.sennheiserkorea.com/account/login">Log in</a></li>                                    
+                            </ul>                       
+                            
                         </div>
                     </div>
                     

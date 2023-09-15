@@ -3,7 +3,7 @@ import React from 'react'
 const BestSelling = (props) => {
     return(
         <div id='best-selling'>
-            <div className="container-md">
+            <div className="container-sm">
                 <div className='mb-5 mx-3'>
                     <h2 className='nondrag'>베스트셀러</h2>
                 </div>
@@ -12,7 +12,7 @@ const BestSelling = (props) => {
                     {
                         props.info.bestsellingdb.map((v,i)=>{
                             return(
-                                <div key={`b-p-${i}`} className="col-xl-4 col-6 my-3">     
+                                <div key={`b-p-${i}`} className="col-xl-4 col-12 my-3">     
                                     <div className='b-p-items mx-3'>
                                         <div className='b-p-img position-relative'>
                                             <a className='d-block position-absolute d-flex' href={v.link}>
