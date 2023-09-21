@@ -3,7 +3,7 @@ import React from 'react'
 const Benefits = () => {
     return(
         <div id="benefits">
-            <div className="container-sm">
+            <div className="container-md">
                 <div className='mx-3 mb-5'>
                     <h2 className='nondrag'>젠하이저 공식 스토어 구매 혜택</h2>
                 </div>
