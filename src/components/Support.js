@@ -19,17 +19,23 @@ const Support = () => {
                             <label htmlFor='item-name'>제품명</label>
                             <div className='d-flex flex-grow-1 position-relative'>
                                 <input id='item-name' type="text" className='flex-grow-1' placeholder='제품명을 입력해주세요.'/>
-                                <button className='support-search-button ms-4 flex-nowrap' type='button'>검색</button>
+                                <button className='support-search-button flex-nowrap' type='button'>검색</button>
                                 <button className='support-mo-search-button position-absolute' type='button'><img src={search} alt="search" /></button>
                             </div>
                             
                         </form>       
                         <form action="#" className='d-flex justify-content-between align-items-center mt-sm-5 mt-4'>
-                            <label htmlFor='serial-number'>제조번호(S/N)</label><input id='serial-number' type="text" className='flex-grow-1' placeholder='제조번호를 입력해주세요.'/>
+                            <label htmlFor='serial-number'>제조번호(S/N)</label>
+                            <div className='support-regi d-flex flex-grow-1'>
+                                <input id='serial-number' type="text" className='flex-grow-1' placeholder='제조번호를 입력해주세요.'/>
+                                <div className='support-regi-button text-end'>
+                                    <button type='button'>등록하기</button>
+                                </div>                               
+                                
+                            </div>
+                            
                         </form>      
-                        <div className='text-end mt-sm-5 mt-4'>
-                            <button type='button'>등록하기</button>
-                        </div>                                             
+                                                                   
                     </div>            
                 </div>
             </div>
