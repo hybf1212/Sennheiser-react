@@ -11,8 +11,8 @@ http://leeminho.cafe24app.com/
 DB 분리로 데이터 관리와 수정에 용이하게 제작하였습니다.
 
 # 주력모듈
-"aos": "^2.3.4",
-"bootstrap": "^5.3.1",
-"react-icons": "^4.10.1",
-"sass": "^1.66.1",
-"swiper": "^10.2.0"
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.1",
+    "react-icons": "^4.10.1",
+    "sass": "^1.66.1",
+    "swiper": "^10.2.0"
